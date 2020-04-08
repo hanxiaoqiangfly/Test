@@ -1,0 +1,29 @@
+.bg-white-radius10 {
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.bg-white-radius20 {
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.marginHorizontal {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.text-12-999 {
+    font-size: 1.2rem;
+    color: #999999;
+}
+
+.text-12-black {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.text-15-black {
+    font-size: 1.5rem;
+    color: black;
+}
