@@ -12,5 +12,6 @@
   text-align: center;
   color: #2c3e50;
   font-size: 1.4rem;
+  height: 100%;
 }
 </style>
