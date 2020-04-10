@@ -12,7 +12,9 @@
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
-
+.marginTop {
+   margin-top: 1rem;
+}
 .text-12-999 {
     font-size: 1.2rem;
     color: #999999;
@@ -26,4 +28,10 @@
 .text-15-black {
     font-size: 1.5rem;
     color: black;
+}
+.div_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
 }

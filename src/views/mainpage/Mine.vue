@@ -27,8 +27,8 @@
 <script>
 
     import {Button, Image, Toast} from "vant"
-    import RouterButton from "../components/RouterButton";
-    import Nav from "../components/BottomNav"
+    import RouterButton from "../../components/RouterButton";
+    import Nav from "../../components/BottomNav"
 
     export default {
         name: 'Mine',
@@ -43,50 +43,50 @@
                 user: {},
                 shop_order: [
                     {
-                        "icon": require("../assets/images/icon_daifukuan.png"),
+                        "icon": require("../../assets/images/icon_daifukuan.png"),
                         "text": "待付款"
                     },
                     {
-                        "icon": require("../assets/images/icon_daishouhuo.png"),
+                        "icon": require("../../assets/images/icon_daishouhuo.png"),
                         "text": "待收货"
                     },
                     {
-                        "icon": require("../assets/images/icon_yiwancheng.png"),
+                        "icon": require("../../assets/images/icon_yiwancheng.png"),
                         "text": "已完成"
                     },
                     {
-                        "icon": require("../assets/images/icon_alldingdan.png"),
+                        "icon": require("../../assets/images/icon_alldingdan.png"),
                         "text": "全部订单"
                     },
                 ],
                 router_button_icon: [
                     {
-                        "icon": require("../assets/images/icon_yaoqingma.png"),
+                        "icon": require("../../assets/images/icon_yaoqingma.png"),
                         "text1": "我的邀请码",
                         "text2": "邀请好友获得积分"
                     },
                     {
-                        "icon": require("../assets/images/icon_yaoqingma.png"),
+                        "icon": require("../../assets/images/icon_yaoqingma.png"),
                         "text1": "我的钱包",
                         "text2": ""
                     },
                     {
-                        "icon": require("../assets/images/icon_yaoqingma.png"),
+                        "icon": require("../../assets/images/icon_yaoqingma.png"),
                         "text1": "我的战队",
                         "text2": ""
                     },
                     {
-                        "icon": require("../assets/images/icon_yaoqingma.png"),
+                        "icon": require("../../assets/images/icon_yaoqingma.png"),
                         "text1": "信息披露",
                         "text2": ""
                     },
                     {
-                        "icon": require("../assets/images/icon_yaoqingma.png"),
+                        "icon": require("../../assets/images/icon_yaoqingma.png"),
                         "text1": "设置",
                         "text2": ""
                     },
                     {
-                        "icon": require("../assets/images/icon_yaoqingma.png"),
+                        "icon": require("../../assets/images/icon_yaoqingma.png"),
                         "text1": "申请入驻商城",
                         "text2": ""
                     }
@@ -95,17 +95,17 @@
             }
         },
         mounted() {
-            // let _this = this;
-            // _this.$api.userApi.login({
-            //     account: "15764268018",
-            //     password: "aaa111111"
-            // }).then(res => {
-            //     _this.user = res.result;
-            //     console.log(res)
-            //     Toast.success({
-            //         message: res.message,
-            //     })
-            // })
+            let _this = this;
+            _this.$api.userApi.login({
+                account: "15764268018",
+                password: "aaa111111"
+            }).then(res => {
+                _this.user = res.result;
+                console.log(res)
+                Toast.success({
+                    message: res.message,
+                })
+            })
         }, methods: {
             rbClick: function (id) {
                 switch (id) {
