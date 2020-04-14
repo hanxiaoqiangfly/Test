@@ -4,7 +4,7 @@
         <div class="container">
             <div id="qrCode"></div>
             <div id="inviteCode">{{inviteCode}}</div>
-            <div class="copy" data-clipboard-action="copy" data-clipboard-target="#inviteCode" @click="onCopy">复制</div>
+            <div class="copy" data-clipboard-text="copy" data-clipboard-target="#inviteCode" @click="onCopy">复制</div>
         </div>
     </div>
 </template>
@@ -34,11 +34,12 @@
             },
             init: function () {
                 var _this = this;
-                _this.inviteCode = _this.$store.state.user.invitecode;
+                // _this.inviteCode = _this.$store.state.user.invitecode;
+                _this.inviteCode = "http://192.168.1.105:8080/geek/geek_2.1.2_20200414_debug.apk";
 
                 new QRCode('qrCode', {
-                    width: 166,
-                    height: 166,
+                    width: 180,
+                    height: 180,
                     text: _this.inviteCode,
                     colorDark: '#000',
                     colorLight: '#fff'

@@ -11,11 +11,17 @@ export default new Vuex.Store({
     mutations: {
         saveUserInfo(state, user) {
             state.user = user;
+        },
+        saveUserId(state, userId) {
+            state.userId = userId;
         }
     },
     actions: {
         saveUserInfo(store, user) {
             store.commit("saveUserInfo", user);
+        },
+        saveUserId(store, userId) {
+            store.commit("saveUserId", userId);
         }
     },
     modules: {}

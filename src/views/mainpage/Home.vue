@@ -17,6 +17,9 @@
             Nav,
             [Button.name]: Button
         },
+        mounted() {
+            this.$store.dispatch("saveUserId",this.$utils.getUrlKey("userId"))
+        },
         methods: {
             toMyFriend: function () {
                 this.$router.push("/myRecommendFriend")
