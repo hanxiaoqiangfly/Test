@@ -54,7 +54,7 @@
                 let _this = this;
                 _this.$api.manorApi.friendList({
                     phone: "",
-                    userId: "cd492e33b4814bfaac61db834243b2a6",
+                    userId: _this.$store.state.userId,
                     offset: _this.offset,
                     limit: "500",
                     sign: "4EDDE8FD62E5D9F87F7DD1E37D4641D5",

@@ -96,15 +96,12 @@
         },
         mounted() {
             let _this = this;
-            _this.$api.userApi.login({
-                account: "15764268018",
-                password: "aaa111111"
+            _this.$api.userApi.myInfo({
+                userId: _this.$store.state.userId,
             }).then(res => {
-                _this.user = res.result;
                 console.log(res)
-                Toast.success({
-                    message: res.message,
-                })
+                _this.user = res.result;
+                _this.$store.dispatch("saveUserInfo", res.result);
             })
         }, methods: {
             rbClick: function (id) {
