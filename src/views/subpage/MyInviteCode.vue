@@ -34,8 +34,7 @@
             },
             init: function () {
                 var _this = this;
-                // _this.inviteCode = _this.$store.state.user.invitecode;
-                _this.inviteCode = "http://192.168.1.105:8080/geek/geek_2.1.2_20200414_debug.apk";
+                _this.inviteCode = _this.$store.state.user.invitecode;
 
                 new QRCode('qrCode', {
                     width: 180,

@@ -20,7 +20,7 @@
                            :icon="item.icon" @rbClick="rbClick(index)"></router-button>
 
         </div>
-        <Nav idx="1"></Nav>
+        <bottom-nav idx="1"></bottom-nav>
     </div>
 </template>
 
@@ -28,7 +28,7 @@
 
     import {Button, Image, Toast} from "vant"
     import RouterButton from "../../components/RouterButton";
-    import Nav from "../../components/BottomNav"
+    import BottomNav from "../../components/BottomNav"
 
     export default {
         name: 'Mine',
@@ -36,7 +36,7 @@
             [Button.name]: Button,
             [Image.name]: Image,
             RouterButton,
-            Nav
+            BottomNav
         },
         data() {
             return {

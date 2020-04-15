@@ -5,15 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        userId: "cd492e33b4814bfaac61db834243b2a6",
-        user: {}
+        userId: localStorage.getItem('userId') ? localStorage.getItem('userId') : '',
+        user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {},
     },
     mutations: {
         saveUserInfo(state, user) {
             state.user = user;
+            localStorage.setItem("user", JSON.stringify(user));
         },
         saveUserId(state, userId) {
             state.userId = userId;
+            localStorage.setItem("userId", userId);
         }
     },
     actions: {

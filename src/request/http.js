@@ -17,7 +17,7 @@ instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlenco
 //请求拦截
 instance.interceptors.request.use(
     config => {
-        const token = "c32703da76a44c97b0896f9dae39a1dd";
+        const token = "f2332daea5144167853a47b75f0b95c5";
         config.headers['token'] = token;
         return config;
     }, error => {

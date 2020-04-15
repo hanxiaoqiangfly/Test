@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import api from "./request/api/index"
 import "./assets/css/base.css"
-import utils from "./assets/js/utils";
+import utils from "./utils/utils";
 
 Vue.prototype.$utils = utils;
 
