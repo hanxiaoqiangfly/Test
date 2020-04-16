@@ -13,7 +13,7 @@
 
 <script>
     import BottomNav from "../../components/BottomNav"
-    import {Button} from "vant"
+    import {Button, Toast} from "vant"
 
     export default {
         name: "Home",
@@ -22,9 +22,25 @@
             [Button.name]: Button
         },
         mounted() {
-            this.$store.dispatch("saveUserId", this.$utils.getUrlKey("userId"))
+            this.init();
         },
         methods: {
+            init: function () {
+                if (!this.$utils.getUrlKey("userId")) {
+                    Toast.fail('userId不存在');
+                    return;
+                }
+
+                this.$store.dispatch("saveUserId", this.$utils.getUrlKey("userId"));
+                let _this = this;
+                _this.$api.userApi.myInfo({
+                    userId: _this.$store.state.userId,
+                }).then(res => {
+                    console.log(res)
+                    _this.user = res.result;
+                    _this.$store.dispatch("saveUserInfo", res.result);
+                })
+            },
             toMyFriend: function () {
                 this.$router.push("/myRecommendFriend")
             },

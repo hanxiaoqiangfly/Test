@@ -95,14 +95,7 @@
             }
         },
         mounted() {
-            let _this = this;
-            _this.$api.userApi.myInfo({
-                userId: _this.$store.state.userId,
-            }).then(res => {
-                console.log(res)
-                _this.user = res.result;
-                _this.$store.dispatch("saveUserInfo", res.result);
-            })
+            this.user = this.$store.state.user;
         }, methods: {
             rbClick: function (id) {
                 switch (id) {
@@ -115,7 +108,6 @@
                 }
             }
         }
-
     }
 </script>
 <style scoped>
